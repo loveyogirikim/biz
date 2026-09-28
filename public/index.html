@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>사업계획서 도우미 — 소상공인 지원사업</title>
+  <meta name="description" content="지원사업 공고문을 올리면 평가기준과 사업계획서 양식에 맞춘 초안을 만들고, 모의 심사까지 해 드립니다." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f6f5c'/%3E%3Cpath d='M9 8h10l4 4v12H9z' fill='%23fff'/%3E%3Cpath d='M12 16h8M12 20h6' stroke='%231f6f5c' stroke-width='2'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./" aria-label="처음 화면">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 3h9l4 4v14H6z" fill="currentColor" opacity=".18"/><path d="M6 3h9l4 4v14H6z M15 3v4h4 M9 12h7 M9 16h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <span>
+          <strong>사업계획서 도우미</strong>
+          <small>공고문 → 평가기준 → 양식 맞춤 초안</small>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <span id="mode-badge" class="badge badge-demo" hidden>데모 모드</span>
+        <button class="btn btn-ghost btn-sm" data-action="open-menu" aria-haspopup="true" aria-expanded="false">저장·불러오기</button>
+      </div>
+    </div>
+    <div id="menu" class="menu" hidden>
+      <button data-action="export-project">작업 파일로 저장(.json)</button>
+      <label class="menu-file">작업 파일 불러오기<input type="file" accept=".json,application/json" data-action="import-project" /></label>
+      <button data-action="set-access-code">이용 코드 입력</button>
+      <button class="danger" data-action="reset">처음부터 새로 하기</button>
+    </div>
+  </header>
+
+  <nav class="stepper" id="stepper" aria-label="진행 단계"></nav>
+
+  <main id="app" class="container" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <p>AI가 만든 <strong>초안</strong>입니다. 제출 전 모든 내용이 사실인지 꼭 확인하세요. 허위 기재는 선정 취소·환수 사유가 됩니다.</p>
+    <p class="muted">입력한 가게 정보는 이 브라우저에만 저장되며, 초안 작성 시에만 AI(Claude)로 전송됩니다.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="shared.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

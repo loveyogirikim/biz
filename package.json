@@ -1,0 +1,20 @@
+{
+  "name": "sosang-plan",
+  "version": "0.1.0",
+  "private": true,
+  "description": "소상공인 지원사업 사업계획서 자동작성 — 공고문 분석 → 평가기준 맞춤 → 양식대로 초안 → 모의심사 → DOCX",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "demo": "LLM_MODE=fake node dev-server.js",
+    "test": "node --test \"tests/*.test.js\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "cfb": "^1.2.2",
+    "docx": "^9.8.0",
+    "fflate": "^0.8.3"
+  }
+}

@@ -1,0 +1,10 @@
+# Vercel 배포물에서 제외 — 웹사이트 구동에 필요 없는 파일들
+# (GitHub 저장소에는 그대로 남고, Actions는 저장소에서 실행되므로 영향 없음)
+.github/
+scripts/
+tests/
+docs/
+main.py
+requirements.txt
+dev-server.js
+.env.example
